@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+quiz_one:
+  id: 1
+  title: General Knowledge Quiz
+  description: Test your general knowledge
+  category: General
+  difficulty_level: 2
+  active: true
+
+quiz_two:
+  id: 2
+  title: Science Quiz
+  description: Basic science questions
+  category: Science
+  difficulty_level: 3
+  active: true
+
+quiz_three:
+  id: 3
+  title: History Quiz
+  description: World history questions
+  category: History
+  difficulty_level: 4
+  active: false

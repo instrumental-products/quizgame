@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user_one:
+  id: 1
+  name: John Doe
+  email: john@example.com
+  role: user
+
+user_two:
+  id: 2
+  name: Jane Smith
+  email: jane@example.com
+  role: user
+
+admin_user:
+  id: 3
+  name: Admin User
+  email: admin@example.com
+  role: admin
