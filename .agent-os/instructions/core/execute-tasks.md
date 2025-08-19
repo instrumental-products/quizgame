@@ -170,6 +170,19 @@ Execute all assigned parent tasks and their subtasks using @.agent-os/instructio
 
 </step>
 
+<step number="6" name="complete_tasks">
+
+### Step 6: Run the task completion steps
+
+After all tasks in tasks.md have been implemented, use @.agent-os/instructions/core/complete-tasks.md to run our series of steps we always run when finishing and delivering a new feature.
+
+<instructions>
+  LOAD: @.agent-os/instructions/core/complete-tasks.md once
+  ACTION: execute all steps in the complete-tasks.md process_flow.
+</instructions>
+
+</step>
+
 </process_flow>
 
 <post_flight_check>

@@ -1,0 +1,22 @@
+<div class="min-h-screen bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-6">
+      <div class="flex items-center">
+        <h2 class="text-xl font-semibold text-gray-900">QuizGame Platform</h2>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-gray-700">Welcome, <%= @user.name %>!</span>
+        <%= button_to "Logout", logout_path, method: :delete, 
+            class: "bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded" %>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center" style="height: calc(100vh - 120px);">
+      <div class="text-center">
+        <h1 class="text-6xl font-bold text-gray-900 mb-4">Hello World</h1>
+        <p class="text-xl text-gray-600">Welcome to the QuizGame platform, <%= @user.name %>!</p>
+        <p class="text-md text-gray-500 mt-2">You are successfully logged in.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@ class QaAnalyticsServiceTest < ActiveSupport::TestCase
 
   setup do
     @quiz = quizzes(:quiz_one)
-    @user = users(:user_one)
+    @user = users(:one)
     @service = QaAnalyticsService.new
     
     # Create some test data
@@ -200,7 +200,7 @@ class QaAnalyticsServiceTest < ActiveSupport::TestCase
 
   def create_sample_qa_reports
     # Create diverse test data
-    users_list = [users(:user_one), users(:user_two), users(:admin_user)]
+    users_list = [users(:one), users(:two), users(:admin)]
     
     # User one takes quiz one 3 times
     QaReport.create!(
@@ -236,7 +236,7 @@ class QaAnalyticsServiceTest < ActiveSupport::TestCase
     # User two takes quiz one
     QaReport.create!(
       quiz: @quiz,
-      user: users(:user_two),
+      user: users(:two),
       score: 85,
       total_questions: 10,
       correct_answers: 8,
@@ -247,7 +247,7 @@ class QaAnalyticsServiceTest < ActiveSupport::TestCase
     # Admin takes quiz one
     QaReport.create!(
       quiz: @quiz,
-      user: users(:admin_user),
+      user: users(:admin),
       score: 75,
       total_questions: 10,
       correct_answers: 7,

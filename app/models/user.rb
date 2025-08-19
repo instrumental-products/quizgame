@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_secure_password
+  
   # Associations
   has_many :qa_reports, dependent: :destroy
   has_many :user_metrics_dailies, dependent: :destroy
@@ -7,6 +9,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :role, inclusion: { in: %w[user admin moderator] }
+  validates :password, length: { minimum: 6 }, allow_nil: true
 
   # Scopes
   scope :admins, -> { where(role: "admin") }
