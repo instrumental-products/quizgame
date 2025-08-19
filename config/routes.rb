@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
   
+  # About page
+  get "about", to: "about#index"
+  
   # Defines the root path route ("/")
   root "home#index"
 end

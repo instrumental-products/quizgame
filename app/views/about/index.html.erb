@@ -1,0 +1,74 @@
+<div class="min-h-screen bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-6">
+      <div class="flex items-center">
+        <h2 class="text-xl font-semibold text-gray-900">QuizGame Platform</h2>
+      </div>
+      <div class="flex items-center space-x-4">
+        <% if current_user %>
+          <span class="text-gray-700">Welcome, <%= current_user.name %>!</span>
+          <%= button_to "Logout", logout_path, method: :delete, 
+              class: "bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded" %>
+        <% else %>
+          <%= link_to "Login", login_path, 
+              class: "bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="py-12">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center">About QuizGame</h1>
+        
+        <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-4">
+            QuizGame is an online quiz platform that helps educators create engaging assessments 
+            and provides detailed analytics by offering comprehensive quiz creation tools with 
+            real-time performance tracking and question-level analytics.
+          </p>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Who We Serve</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            QuizGame serves educators who need to create effective assessments and track student 
+            performance with detailed insights. We understand that teaching requires more than just 
+            knowing if students passed or failed - it requires understanding where they struggle 
+            and how to help them improve.
+          </p>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">What Makes Us Different</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-4">
+            Unlike basic quiz platforms that only show pass/fail rates, QuizGame provides:
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+            <li>Comprehensive question-level analytics to identify knowledge gaps</li>
+            <li>A 5-level difficulty system with automated scoring</li>
+            <li>Real-time performance dashboards for immediate insights</li>
+            <li>Data-driven recommendations to improve teaching effectiveness</li>
+          </ul>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg p-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get Started</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            Ready to transform your assessments with powerful analytics? Join QuizGame today 
+            and start making data-driven improvements to your teaching.
+          </p>
+          <div class="text-center">
+            <% if current_user %>
+              <%= link_to "Go to Dashboard", root_path, 
+                  class: "bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg" %>
+            <% else %>
+              <%= link_to "Sign Up Now", login_path, 
+                  class: "bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

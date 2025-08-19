@@ -3,7 +3,7 @@ class Quiz < ApplicationRecord
   has_many :qa_reports, dependent: :destroy
   has_many :questions, dependent: :destroy
   has_many :quiz_metrics_dailies, dependent: :destroy
-  has_many :question_analytics, dependent: :destroy
+  has_many :question_analytics, class_name: "QuestionAnalytics", dependent: :destroy
 
   # Validations
   validates :title, presence: true
