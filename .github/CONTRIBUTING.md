@@ -6,9 +6,17 @@ Thanks for considering a contribution! Agent OS is free and open source, but to 
 
 ## Where things go
 
-- **Discussions (Bugs):** Report suspected bugs. Maintainers may promote confirmed bugs into Issues.  
-- **Discussions (Ideas):** Share feature ideas and proposals. Maintainers may label them `approved` if they align with the roadmap.  
-- **Discussions (Q&A):** Ask “how do I…?” questions and get community support (best-effort only).  
+- **Discussions (Bugs):** Report suspected bugs.  
+  👉 **Check the docs before posting:** [buildermethods.com/agent-os](https://buildermethods.com/agent-os)  
+  Maintainers may promote confirmed bugs into Issues.
+
+- **Discussions (Ideas):** Share feature ideas and proposals.  
+  👉 **Check the docs first** to ensure it’s not already supported.
+
+- **Discussions (Q&A):** Ask “how do I…?” questions.  
+  👉 **Check the docs first** to avoid duplicates and find quick answers.  
+  This is community-supported only.
+
 - **Builder Methods Pro:** Paid membership with guaranteed support → https://buildermethods.com/pro  
 
 ---
@@ -32,15 +40,15 @@ PRs that don’t meet these requirements will be **auto-closed by our bot**.
 
 ---
 
-## How to propose a feature or integration
+## How to propose a feature (RFC)
 
 Open a Discussion in **Ideas** with:  
 - Problem & motivation  
 - Proposed change & alternatives  
-- User experience impact  
+- UX/devex impact  
 - Migration/compatibility considerations  
 
-If a maintainer labels it **`approved`**, then a PR may be opened and linked to the discussion.
+If a maintainer labels it **`approved`**, then a PR may be opened.
 
 ---
 
