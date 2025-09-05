@@ -4,7 +4,7 @@ Thanks for considering a contribution!
 
 ## What goes where
 - **Issues:** Reproducible bugs only.
-- **Discussions (Ideas):** Feature ideas & RFCs.
+- **Discussions (Ideas):** New features or integration requests and other ideas.
 - **Discussions (Q&A):** “How do I…?” questions and community help.
 - **Official support:** https://buildermethods.com/pro
 
