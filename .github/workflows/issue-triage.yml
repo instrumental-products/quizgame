@@ -21,7 +21,7 @@ jobs:
       # ---------- FEATURE REQUESTS ----------
       - name: Remove 'bug' if present (feature)
         if: contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'feature-request') && contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'bug')
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             try {
@@ -35,7 +35,7 @@ jobs:
 
       - name: Convert FEATURE issues to Discussions (Ideas)
         if: contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'feature-request')
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const issue = context.payload.issue
@@ -68,7 +68,7 @@ jobs:
       # ---------- SUPPORT / QUESTIONS ----------
       - name: Remove 'bug' if present (support/question)
         if: (contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'support') || contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'question')) && contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'bug')
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             try {
@@ -82,7 +82,7 @@ jobs:
 
       - name: Convert SUPPORT/QUESTION issues to Discussions (Q&A)
         if: contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'support') || contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'question')
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const issue = context.payload.issue
