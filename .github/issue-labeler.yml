@@ -1,6 +1,6 @@
-support:
-  - '/\b(how do I|how to|help|setup|install|configuration|not working|error installing|getting started|trouble with)\b/i'
 feature-request:
-  - '/\b(feature|feature request|would be great|could you add|please add|enhancement|roadmap)\b/i'
+  - '/\b(feature|feature request|enhancement|could you add|please add|roadmap)\b/i'
+support:
+  - '/\b(how do i|how to|help|setup|install|configuration|getting started|not working|error installing|troubleshoot)\b/i'
 question:
-  - '/\b(question|any way to|is it possible|can I)\b/i'
+  - '/\b(question|is it possible|can i|any way to)\b/i'
