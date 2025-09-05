@@ -1,0 +1,70 @@
+name: "🐛 Bug report"
+description: Report a reproducible bug in Agent OS
+title: "[Bug] <short description>"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Agent OS!
+        **Issues are for reproducible bugs only.**
+        - For “how do I…?” questions, please use Discussions: https://github.com/buildermethods/agent-os/discussions
+        - For setup/help support with guaranteed responses from Brian, join Builder Methods Pro: https://buildermethods.com/pro
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I've searched existing issues and discussions for duplicates.
+          required: true
+        - label: I'm using the latest version of Agent OS (or reproduced on latest).
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: Agent OS version
+      placeholder: e.g., v2.0.1 (or commit SHA)
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: OS, shell, editor/IDE version, model provider, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact steps/commands to reproduce from a clean state.
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior / error output
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / screenshots
+      description: Redact secrets before posting.
+      render: shell
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
