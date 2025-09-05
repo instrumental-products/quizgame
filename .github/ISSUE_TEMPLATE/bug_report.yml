@@ -9,40 +9,43 @@ body:
       value: |
         Thanks for helping improve Agent OS!
         **Issues are for reproducible bugs only.**
-        - For “how do I…?” questions, please use Discussions: https://github.com/buildermethods/agent-os/discussions
-        - For setup/help support with guaranteed responses from Brian, join Builder Methods Pro: https://buildermethods.com/pro
+        • Feature ideas → Discussions (Ideas)
+        • Questions/support → Discussions (Q&A) or Builder Methods Pro for guaranteed responses.
+
+        👉 Ideas: https://github.com/buildermethods/agent-os/discussions/new?category=ideas
+        👉 Q&A:   https://github.com/buildermethods/agent-os/discussions/new?category=q-a
+        👉 Pro:   https://buildermethods.com/pro
   - type: checkboxes
     id: checklist
     attributes:
       label: Pre-flight checks
       options:
-        - label: I've searched existing issues and discussions for duplicates.
+        - label: I searched existing issues and discussions for duplicates.
           required: true
-        - label: I'm using the latest version of Agent OS (or reproduced on latest).
+        - label: I reproduced this on the latest Agent OS version.
           required: true
   - type: input
     id: version
     attributes:
       label: Agent OS version
-      placeholder: e.g., v2.0.1 (or commit SHA)
+      placeholder: e.g., v2.1.0 (or commit SHA)
     validations:
       required: true
   - type: input
     id: environment
     attributes:
       label: Environment
-      placeholder: OS, shell, editor/IDE version, model provider, etc.
+      placeholder: OS, shell, IDE, model provider, etc.
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
-      description: Exact steps/commands to reproduce from a clean state.
+      label: Steps to reproduce (from a clean state)
       placeholder: |
-        1. …
-        2. …
-        3. …
+        1) …
+        2) …
+        3) …
     validations:
       required: true
   - type: textarea
@@ -54,17 +57,17 @@ body:
   - type: textarea
     id: actual
     attributes:
-      label: Actual behavior / error output
+      label: Actual behavior / errors
       render: shell
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
-      label: Relevant logs / screenshots
-      description: Redact secrets before posting.
+      label: Relevant logs / screenshots (redact secrets)
       render: shell
-  - type: textarea
-    id: notes
+  - type: markdown
     attributes:
-      label: Additional context
+      value: |
+        **Want to fast-track a fix?**
+        If you’re able, please open a PR that links to this issue after reproducing. We welcome bug-fix PRs.
