@@ -1,13 +1,21 @@
 # Support policy
 
-We separate **bugs**, **ideas**, and **support** to keep the project healthy:
+Agent OS is free and open source. To keep it sustainable, we split **support** into two paths:
 
-- **Bugs (Issues):** Use GitHub Issues **only** for reproducible bugs with steps/logs.
-- **Ideas / Feature requests:** Use **Discussions (Ideas)** so others can comment, add context, and upvote.
-- **Support docs:** The [official docs](https://buildermethods.com/agent-os) have the most up-to-date info on installation, upgrading, and useage guides.
-- **Questions / Community support:** Use **Discussions (Q&A)** for “how do I…?”.
-- **Official support (guaranteed):** Join **Builder Methods Pro** for guaranteed responses from Brian & team.
+- **Community support (free):**  
+  Use [GitHub Discussions](https://github.com/buildermethods/agent-os/discussions) in the **Q&A** category. Anyone is welcome to ask questions and share answers. Maintainers may occasionally reply, but there is **no guarantee**.
+
+- **Official support (paid):**  
+  For guaranteed responses from Brian & team, join **Builder Methods Pro**:  
   👉 https://buildermethods.com/pro
 
-Docs: https://buildermethods.com/agent-os
-Discussions: https://github.com/buildermethods/agent-os/discussions
+---
+
+## Bugs
+Suspected bugs should be posted in the **Bugs category** of Discussions.  
+Maintainers may promote confirmed bugs to Issues for tracking and fixes.
+
+---
+
+## Feature ideas
+Use the **Ideas category** of Discussions to propose and upvote feature requests. Only ideas explicitly marked `approved` by maintainers may later be implemented in core.
