@@ -21,12 +21,13 @@ Even well-structured, tested, and documented **new features are rarely accepted 
 Open a Discussion (Ideas) outlining:
 - Problem & motivation
 - Proposed change & alternatives
-- UX/devex impact
+- User experience impact
 - Migration/compat guidance
-A maintainer may label the discussion **`approved`** if it’s aligned. Only then are feature PRs welcomed.
+  
+A maintainer may label the discussion **`approved`** if it's aligned. Only then are new feature PRs welcomed.
 
 ## Bug-fix PRs
-Bug-fix PRs linked to an open **`bug`** Issue are welcomed. Please include tests when feasible and update docs if behavior changes.
+Bug-fix PRs linked to an open **`bug`** Issue are welcomed. Please include testing instructions when feasible.  Also propose updates to docs if behavior changes.
 
 ## Docs improvements
 PRs that fix typos/clarify docs are welcome and do **not** require an `approved` Discussion or `bug` Issue.
