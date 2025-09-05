@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Feature ideas & Q&A → GitHub Discussions
+    url: https://github.com/buildermethods/agent-os/discussions
+    about: Share ideas, upvote requests, and ask non-bug questions here.
+  - name: 🧭 Official docs
+    url: https://buildermethods.com/agent-os
+    about: Read the docs for installation, configuration, and usage guides.
+  - name: 🎯 Need support with guaranteed responses? → Builder Methods Pro
+    url: https://buildermethods.com/pro
+    about: Paid membership with community chat, workshops, courses, and official support.
+  - name: 🔒 Security reports
+    url: https://github.com/buildermethods/agent-os/security/policy
+    about: Please report security vulnerabilities privately via the Security Policy.
