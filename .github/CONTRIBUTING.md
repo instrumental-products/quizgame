@@ -32,15 +32,15 @@ PRs that don’t meet these requirements will be **auto-closed by our bot**.
 
 ---
 
-## How to propose a feature (RFC)
+## How to propose a feature or integration
 
 Open a Discussion in **Ideas** with:  
 - Problem & motivation  
 - Proposed change & alternatives  
-- UX/devex impact  
+- User experience impact  
 - Migration/compatibility considerations  
 
-If a maintainer labels it **`approved`**, then a PR may be opened.
+If a maintainer labels it **`approved`**, then a PR may be opened and linked to the discussion.
 
 ---
 
