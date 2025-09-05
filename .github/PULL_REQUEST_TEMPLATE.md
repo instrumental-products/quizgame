@@ -1,16 +1,20 @@
 ## Summary
-<!-- What does this change do? -->
+<!-- What does this change do and why? Keep it tight. -->
 
-## Type
-- [ ] Bug fix
-- [ ] Feature / enhancement (discussed in a Discussion and agreed on)
-- [ ] Docs
+## Linked item
+- Closes: #<number> (must be an open `bug` Issue) **OR**
+- Implements: #<number> (must be a Discussion labeled `approved`)
 
 ## Checklist
-- [ ] Linked related issue/discussion (if any).
-- [ ] Added/updated tests (if applicable).
-- [ ] Updated docs (if applicable).
-- [ ] I confirm this change follows the CONTRIBUTING guidelines.
+- [ ] Linked to related Issue/Discussion **with `bug` or `approved` label**
+- [ ] Documented steps to test (below)
+- [ ] Drafted “how to use” docs (if this adds new behavior)
+- [ ] Backwards compatibility considered (notes if applicable)
+
+## Documented steps to test
+1.
+2.
+3.
 
 ## Notes for reviewers
-<!-- Anything to call out? -->
+<!-- Anything to call out, screenshots, logs, perf notes, etc. -->
