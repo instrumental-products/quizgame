@@ -1,22 +1,34 @@
-# Contributing to this thing
+# Contributing to Agent OS
 
 Thanks for considering a contribution!
 
 ## What goes where
 - **Issues:** Reproducible bugs only.
-- **Discussions:** Feature ideas, questions, RFCs, design proposals.
-- **Docs:** PRs welcome for clarifications, examples, and fixes.
+- **Discussions (Ideas):** Feature ideas & RFCs.
+- **Discussions (Q&A):** “How do I…?” questions and community help.
+- **Official support:** https://buildermethods.com/pro
 
-## Workflow
-1. For features/changes, open a **Discussion** first to align on scope.
-2. Fork and create a feature branch.
-3. Keep PRs focused and small.
-4. Include tests/docs where applicable.
-5. Follow the PR template and be responsive to review feedback.
+## Pull Requests (read first)
+To avoid churn and protect maintainer time, **PRs must meet at least one of:**
+1) Link to a **Discussion** that a maintainer labeled **`approved`**, or  
+2) Link to an **open Issue** labeled **`bug`**.
 
-## Coding standards
-- Strive for clarity over cleverness.
-- Keep changes minimal and well-explained.
-- Ensure CI passes.
+PRs that do not meet the above are auto-closed by our bot.
+
+Even well-structured, tested, and documented **new features are rarely accepted into core**. Beyond roadmap fit, we must consider long-term maintenance and backward/future compatibility. We still **encourage ideas**—especially those with clear, widely useful use-cases and tangible improvement over today’s behavior. Please start those in **Discussions (Ideas)**.
+
+## How to propose a feature (RFC)
+Open a Discussion (Ideas) outlining:
+- Problem & motivation
+- Proposed change & alternatives
+- UX/devex impact
+- Migration/compat guidance
+A maintainer may label the discussion **`approved`** if it’s aligned. Only then are feature PRs welcomed.
+
+## Bug-fix PRs
+Bug-fix PRs linked to an open **`bug`** Issue are welcomed. Please include tests when feasible and update docs if behavior changes.
+
+## Docs improvements
+PRs that fix typos/clarify docs are welcome and do **not** require an `approved` Discussion or `bug` Issue.
 
 By participating, you agree to the [Code of Conduct](./CODE_OF_CONDUCT.md).
