@@ -1,6 +1,17 @@
+# Label when body/title looks like a FEATURE REQUEST
 feature-request:
-  - '/\b(feature|feature request|enhancement|could you add|please add|roadmap)\b/i'
+  - '/\b(feature|feature request|enhancement|roadmap|could you add|please add|support for)\b/i'
+  - '/\b(rfc|proposal|suggestion|idea)\b/i'
+  # 👇 Add new phrasing on its own line
+  # - '/\bnew mode\b/i'
+
+# Label when body/title looks like SUPPORT / QUESTION
 support:
-  - '/\b(how do i|how to|help|setup|install|configuration|getting started|not working|error installing|troubleshoot)\b/i'
+  - '/\b(how do i|how to|help|support|setup|install|installation|configure|configuration|getting started)\b/i'
+  - '/\b(not working|broken|stuck|troubleshoot|troubleshooting|error installing|fails to|cannot|can\'t)\b/i'
+  - '/\b(compatible|compatibility|works with|windows|linux|macos)\b/i'
+  # 👇 Add new phrasing on its own line
+  # - '/\binstallation problems\b/i'
+
 question:
-  - '/\b(question|is it possible|can i|any way to)\b/i'
+  - '/\b(question|is it possible|can i|any way to|what is the best|should i)\b/i'
