@@ -1,17 +1,17 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 💡 Feature ideas & proposals → Discussions (Ideas)
-    url: https://github.com/buildermethods/agent-os/discussions/new?category=ideas
-    about: Propose and discuss improvements with the community.
-  - name: ❓ Questions & community support → Discussions (Q&A)
-    url: https://github.com/buildermethods/agent-os/discussions/new?category=q-a
-    about: Ask “how do I…?” and get community help (best-effort).
-  - name: 🎯 Official support (guaranteed response) → Builder Methods Pro
-    url: https://buildermethods.com/pro
-    about: Paid support with guaranteed responses from Brian & team.
-  - name: 📚 Docs
-    url: https://buildermethods.com/agent-os
-    about: Installation, config, and usage guides.
-  - name: 🔒 Security reports
-    url: https://github.com/buildermethods/agent-os/security/policy
-    about: Please report security issues privately via the Security Policy.
+  - name: Get help or ask a question
+    url: https://github.com/livewire/livewire/discussions
+    about: Ask questions or get help from the community.
+  - name: Feature request
+    url: https://github.com/livewire/livewire/discussions/categories/ideas
+    about: For feature requests and ideas.
+  - name: Bug Report
+    url: https://github.com/livewire/livewire/discussions/categories/bugs
+    about: Submit suspected bugs here.
+  - name: Documentation issue
+    url: https://github.com/livewire/livewire/pulls
+    about: For docs problems, please open a PR.
+  - name: Report a security vulnerability
+    url: https://github.com/livewire/livewire/security/policy
+    about: Please review our security policy for details.
