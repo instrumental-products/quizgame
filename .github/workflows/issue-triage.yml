@@ -1,0 +1,89 @@
+name: Issue triage (route non-bugs to Discussions)
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  issues: write
+  discussions: write
+
+jobs:
+  label-and-route:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-label by regex
+        uses: github/issue-labeler@v3
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/issue-labeler.yml
+
+      - name: Convert FEATURE issues to Discussions (Ideas)
+        uses: actions/github-script@v7
+        if: contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'feature-request')
+        with:
+          script: |
+            const issue = context.payload.issue
+            const octo = github.getOctokit(process.env.GITHUB_TOKEN)
+
+            // fetch discussion categories to find "ideas"
+            const { data: cats } = await octo.rest.discussions.listDiscussionCategories({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            })
+            const cat = cats.find(c => c.slug === 'ideas' || /idea/i.test(c.name))
+            if (!cat) {
+              core.setFailed('No "Ideas" discussion category found. Create one named "Ideas".')
+            } else {
+              const { data: disc } = await octo.rest.discussions.createDiscussion({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                category_id: cat.id,
+                title: issue.title,
+                body: `Moved from issue #${issue.number}:\n\n${issue.body || ''}`
+              })
+              await octo.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `This looks like a **feature request**. I moved it to Discussions (Ideas) so others can upvote and add context:\n\n➡️ ${disc.html_url}`
+              })
+              await octo.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issue.number, state: 'closed'
+              })
+            }
+
+      - name: Convert SUPPORT/QUESTION issues to Discussions (Q&A)
+        uses: actions/github-script@v7
+        if: contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'support') || contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'question')
+        with:
+          script: |
+            const issue = context.payload.issue
+            const octo = github.getOctokit(process.env.GITHUB_TOKEN)
+
+            const { data: cats } = await octo.rest.discussions.listDiscussionCategories({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            })
+            const cat = cats.find(c => c.slug === 'q-a' || /q.?a/i.test(c.name))
+            if (!cat) {
+              core.setFailed('No "Q&A" discussion category found. Create one named "Q&A".')
+            } else {
+              const body = (issue.body || '') + `\n\n—\n\n**Official support (guaranteed):** https://buildermethods.com/pro`
+              const { data: disc } = await octo.rest.discussions.createDiscussion({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                category_id: cat.id,
+                title: issue.title,
+                body
+              })
+              await octo.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `This looks like a **question/support** request. I moved it to Discussions (Q&A):\n\n➡️ ${disc.html_url}\n\nFor guaranteed responses, join **Builder Methods Pro** → https://buildermethods.com/pro`
+              })
+              await octo.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issue.number, state: 'closed'
+              })
+            }
